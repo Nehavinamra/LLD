@@ -66,7 +66,14 @@ class Parkinglot:
         print("The total number of Small spots vacant:" + str(self.smallspots))
         
 class ParkingDisplay:
-    def __init__(self):
+    def __init__(self, Parkinglot):
+        self.Parkinglot = Parkinglot
+        print("Large spots left: " + str(self.Parkinglot.largespots))
+        print("Medium spots left: " + str(self.Parkinglot.mediumspots))
+        print("Small spots left: " + str(self.Parkinglot.smallspots))
+        
+        
+
               
     
 Parkingobj = Parkinglot()
@@ -74,4 +81,5 @@ Parkingobj.entry_parkvehicle("car", "1")
 Parkingobj.entry_parkvehicle("Two wheeler", "1")
 Parkingobj.parkspot_counter()
 Parkingobj.exit_parkvehicle("car")
+ParkingDisplayobj = ParkingDisplay(Parkingobj)
 
